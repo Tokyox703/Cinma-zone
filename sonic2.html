@@ -25,7 +25,7 @@
         header h1 {
             font-size: 36px;
             color: #00e676;
-            text-shadow: 0 0 5px #00b5ff, 0 0 15px #00b5ff, 0 0 25px #00b5ff, 0 0 35px #00b5ff, 0 0 50px #00b5ff, 0 0 75px #00b5ff; /* توهج باللون الأزرق */
+            text-shadow: 0 0 5px #00b5ff, 0 0 15px #00b5ff, 0 0 25px #00b5ff, 0 0 35px #00b5ff, 0 0 50px #00b5ff, 0 0 75px #00b5ff;
             animation: glow 1.5s ease-in-out infinite alternate;
         }
 
@@ -46,7 +46,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             animation: fadeIn 1.5s ease-in-out;
-            transform: scale(1.6); /* تكبير العناصر بنسبة 60% */
+            transform: scale(1);
             transform-origin: top;
         }
 
@@ -74,7 +74,7 @@
         }
 
         .movie-info h3 {
-            color: #00b5ff; /* اللون الأزرق */
+            color: #00b5ff;
             margin-bottom: 10px;
         }
 
@@ -121,7 +121,7 @@
         }
 
         .fact-section h2 {
-            color: #00b5ff; /* اللون الأزرق */
+            color: #00b5ff;
             text-align: center;
             margin-bottom: 20px;
         }
@@ -139,6 +139,76 @@
             text-align: center;
             padding: 10px;
             margin-top: 40px;
+        }
+
+        /* التعديلات للهواتف المحمولة */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 24px; /* تصغير حجم العنوان */
+            }
+
+            .movie-details {
+                padding: 15px;
+                margin: 20px auto;
+                transform: scale(1); /* إزالة التكبير */
+            }
+
+            .movie-info {
+                flex-direction: column; /* جعل العناصر في عمود واحد */
+            }
+
+            .movie-info div {
+                margin: 5px 0; /* تقليل الهوامش */
+            }
+
+            .btn-watch, .btn-back {
+                width: 100%; /* جعل الأزرار تأخذ العرض الكامل */
+                margin: 5px 0; /* تقليل الهوامش */
+                padding: 10px 20px; /* تصغير حجم الأزرار */
+                font-size: 16px; /* تصغير حجم الخط */
+            }
+
+            .fact-section h2 {
+                font-size: 20px; /* تصغير حجم العنوان */
+            }
+
+            .fact {
+                padding: 10px; /* تصغير الحشوة */
+                font-size: 14px; /* تصغير حجم الخط */
+            }
+
+            footer p {
+                font-size: 14px; /* تصغير حجم النص في الفوتر */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 20px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .movie-details {
+                padding: 10px;
+                margin: 10px auto;
+            }
+
+            .btn-watch, .btn-back {
+                padding: 8px 15px; /* تصغير حجم الأزرار أكثر */
+                font-size: 14px; /* تصغير حجم الخط أكثر */
+            }
+
+            .fact-section h2 {
+                font-size: 18px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .fact {
+                padding: 8px; /* تصغير الحشوة أكثر */
+                font-size: 12px; /* تصغير حجم الخط أكثر */
+            }
+
+            footer p {
+                font-size: 12px; /* تصغير حجم النص في الفوتر أكثر */
+            }
         }
     </style>
 </head>
