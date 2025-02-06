@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man: Across the Spider-Verse - Cinema Zone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #1c1c1c;
+            padding: 14px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header h1 {
+            color: #e60000;
+            font-size: 24px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #e60000, 0 0 20px #e60000, 0 0 30px #e60000;
+            }
+            to {
+                text-shadow: 0 0 20px #e60000, 0 0 30px #e60000, 0 0 40px #e60000;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .movie-details {
+            max-width: 1000px;
+            margin: 28px auto;
+            padding: 14px;
+            background-color: #262626;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .movie-details img {
+            width: 100%; /* جعل الصورة متجاوبة */
+            max-width: 400px; /* تحديد أقصى عرض للصورة */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 14px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideIn 1.5s ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        .movie-details img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .movie-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        .movie-info div {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 6px;
+            flex: 1;
+            text-align: center;
+            min-width: 110px;
+            animation: fadeIn 2s ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        .movie-info div:hover {
+            transform: scale(1.05);
+        }
+
+        .movie-info h3 {
+            color: #e60000;
+            margin-bottom: 6px;
+        }
+
+        .btn-watch {
+            background-color: #ff3d00;
+            color: #fff;
+            padding: 10px 22px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+            display: inline-block;
+            margin: 6px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .btn-watch:hover {
+            background-color: #d32f2f;
+            transform: scale(1.1);
+        }
+
+        .btn-back {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 22px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 14px;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #0056b3;
+        }
+
+        .fact-section {
+            background-color: #292929;
+            padding: 14px;
+            border-radius: 10px;
+            margin-top: 14px;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .fact-section h2 {
+            color: #e60000;
+            text-align: center;
+            margin-bottom: 14px;
+        }
+
+        .fact {
+            background-color: #444;
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .fact:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #fff;
+            text-align: center;
+            padding: 6px;
+            margin-top: 28px;
+            animation: fadeIn 3.5s ease-in-out;
+        }
+
+        /* التعديلات للهواتف المحمولة */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 20px; /* تصغير حجم العنوان */
+            }
+
+            .movie-details {
+                padding: 10px; /* تقليل الحشو */
+            }
+
+            .movie-info {
+                flex-direction: column; /* جعل العناصر في عمود واحد */
+                align-items: center;
+            }
+
+            .movie-info div {
+                width: 80%; /* جعل العناصر تأخذ عرضًا أكبر */
+                margin: 6px 0; /* تقليل الهوامش */
+            }
+
+            .btn-watch, .btn-back {
+                width: 80%; /* جعل الأزرار تأخذ عرضًا أكبر */
+                margin: 6px auto; /* توسيط الأزرار */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 18px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .movie-details img {
+                width: 90%; /* تصغير عرض الصورة */
+            }
+
+            .movie-info div {
+                width: 90%; /* جعل العناصر تأخذ عرضًا أكبر */
+            }
+
+            .btn-watch, .btn-back {
+                width: 90%; /* جعل الأزرار تأخذ عرضًا أكبر */
+                font-size: 12px; /* تصغير حجم الخط */
+            }
+
+            .fact-section h2 {
+                font-size: 16px; /* تصغير حجم العنوان */
+            }
+
+            .fact {
+                font-size: 12px; /* تصغير حجم الخط */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎬 Spider-Man: Across the Spider-Verse - Cinema Zone 🎥</h1>
+    </header>
+
+    <section class="movie-details">
+        <img src="https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_.jpg" alt="Spider-Man: Across the Spider-Verse">
+
+        <div class="movie-info">
+            <div>
+                <h3>التقييم</h3>
+                <p>⭐️⭐️⭐️⭐️⭐️ (9.0/10)</p>
+            </div>
+            <div>
+                <h3>سنة الإصدار</h3>
+                <p>2023</p>
+            </div>
+            <div>
+                <h3>المدة</h3>
+                <p>2h 20m</p>
+            </div>
+        </div>
+
+        <p><strong>قصة الفيلم:</strong> مايلز موراليس يعود في مغامرة جديدة عبر الأكوان المتعددة، حيث يلتقي بفرقة من سبايدرمان من عوالم مختلفة. يجب عليه أن يتحدى قوى الشر ويحافظ على توازن الأكوان.</p>
+
+        <div class="fact-section">
+            <h2>حقائق ممتعة عن الفيلم</h2>
+            <div class="fact">
+                🎥 <strong>المخرج:</strong> جواكيم دوس سانتوس، كيمب باورز، وجوستين ك. طومسون.
+            </div>
+            <div class="fact">
+                ⭐️ <strong>البطولة:</strong> شاميك مور، هايلي ستاينفيلد، وأوسكار إيزاك.
+            </div>
+            <div class="fact">
+                ✨ <strong>التأثيرات البصرية:</strong> الفيلم يتميز بتصميم فني مذهل يجمع بين الرسوم المتحركة التقليدية والتقنيات الحديثة.
+            </div>
+        </div>
+
+        <a href="https://drive.google.com/file/d/1examplelink/view?usp=sharing" class="btn-watch" target="_blank">مشاهدة 🎬</a>
+        <a href="https://drive.google.com/file/d/1examplelink/view?usp=sharing" class="btn-watch" target="_blank">تحميل ⬇️</a>
+
+        <a href="index.html" class="btn-back">العودة إلى الصفحة الرئيسية 🏠</a>
+    </section>
+
+    <footer>
+        <p>© 2025 جميع الحقوق محفوظة | موقع الأفلام المفضل لديك! 🍿</p>
+    </footer>
+</body>
+</html>
