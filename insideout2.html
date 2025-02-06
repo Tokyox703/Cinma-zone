@@ -16,7 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
             flex-direction: column;
         }
@@ -24,7 +24,7 @@
         /* اسم الفيلم الذي سيظل ظاهرًا في أعلى الصفحة */
         header {
             background-color: #1c1c1c;
-            padding: 30px;
+            padding: 20px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             width: 100%;
@@ -32,7 +32,7 @@
 
         header h1 {
             color: #ff6f61;
-            font-size: 50px;
+            font-size: 36px;
             text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61, 0 0 30px #ff6f61, 0 0 40px #ff6f61;
             animation: glow 1.5s ease-in-out infinite alternate;
         }
@@ -52,18 +52,19 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            max-width: 70%; /* تقليل العرض بنسبة 10% */
-            padding: 25px;
+            width: 90%; /* جعل العرض متجاوبًا */
+            max-width: 800px; /* الحد الأقصى للعرض */
+            padding: 20px;
             background-color: #262626;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            margin-top: 30px;
+            margin-top: 20px;
             text-align: center;
         }
 
         .movie-details img {
-            width: 100%; /* جعل الصورة متجاوبة مع العرض الجديد */
-            max-width: 432px; /* تقليل العرض بنسبة 10% */
+            width: 100%;
+            max-width: 400px; /* جعل الصورة متجاوبة */
             height: auto;
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -76,25 +77,26 @@
             align-items: center;
             text-align: center;
             margin-bottom: 20px;
-            gap: 18px; /* تقليل المسافة بين العناصر */
+            gap: 15px; /* تقليل المسافة بين العناصر */
+            flex-wrap: wrap; /* جعل العناصر تنتقل إلى سطر جديد عند الضرورة */
         }
 
         .movie-info div {
             background-color: #333;
             padding: 15px;
             border-radius: 10px;
-            margin: 10px;
             text-shadow: 0 0 10px #ff6f61, 0 0 20px #ff6f61;
-            width: 216px; /* تقليل العرض بنسبة 10% */
+            width: 150px; /* تقليل العرض */
+            margin: 5px; /* تقليل الهوامش */
         }
 
         .btn-watch, .btn-back {
             display: inline-block;
-            padding: 12px 30px; /* تقليل حجم الأزرار بنسبة 10% */
+            padding: 10px 20px; /* تقليل حجم الأزرار */
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 16px;
             text-decoration: none;
-            margin: 12px 6px;
+            margin: 10px 5px;
             text-align: center;
             transition: background 0.3s ease-in-out;
         }
@@ -122,7 +124,7 @@
             color: #fff;
             text-align: center;
             padding: 15px;
-            margin-top: 40px;
+            margin-top: 20px;
             width: 100%;
         }
 
@@ -137,6 +139,66 @@
             font-size: 16px;
             color: #ddd;
             margin-top: 10px;
+        }
+
+        /* التعديلات للهواتف المحمولة */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 28px; /* تصغير حجم العنوان */
+            }
+
+            .movie-details {
+                width: 95%; /* زيادة العرض لشاشات الهواتف */
+                padding: 15px;
+            }
+
+            .movie-info {
+                flex-direction: column; /* جعل العناصر في عمود واحد */
+                gap: 10px;
+            }
+
+            .movie-info div {
+                width: 100%; /* جعل العناصر تأخذ العرض الكامل */
+                margin: 5px 0;
+            }
+
+            .btn-watch, .btn-back {
+                width: 100%; /* جعل الأزرار تأخذ العرض الكامل */
+                margin: 5px 0;
+                padding: 8px 15px; /* تصغير حجم الأزرار */
+                font-size: 14px; /* تصغير حجم الخط */
+            }
+
+            .fact-section h2 {
+                font-size: 20px; /* تصغير حجم العنوان */
+            }
+
+            .fact {
+                font-size: 14px; /* تصغير حجم الخط */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 24px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .movie-details {
+                padding: 10px;
+            }
+
+            .btn-watch, .btn-back {
+                padding: 6px 12px; /* تصغير حجم الأزرار أكثر */
+                font-size: 12px; /* تصغير حجم الخط أكثر */
+            }
+
+            .fact-section h2 {
+                font-size: 18px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .fact {
+                font-size: 12px; /* تصغير حجم الخط أكثر */
+            }
         }
     </style>
 </head>
