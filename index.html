@@ -6,12 +6,17 @@
     <title>موقع أفلام | Cinema Zone</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* إعادة تعيين الهوامش والحشوات */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             background-color: #000; /* خلفية سوداء */
             color: #fff; /* نص أبيض */
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             direction: rtl;
         }
 
@@ -45,7 +50,7 @@
         .movie {
             margin: 10px;
             text-align: center;
-            width: 200px;
+            width: calc(25% - 20px); /* 4 أفلام في الصف على الشاشات الكبيرة */
         }
 
         .movie img {
@@ -69,72 +74,103 @@
             text-align: center;
             margin-top: 20px;
         }
+
+        /* تصميم متجاوب */
+        @media (max-width: 1024px) {
+            .movie {
+                width: calc(33.33% - 20px); /* 3 أفلام في الصف على الشاشات المتوسطة */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .movie {
+                width: calc(50% - 20px); /* فيلمين في الصف على الشاشات الصغيرة */
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .movie {
+                width: calc(100% - 20px); /* فيلم واحد في الصف على الشاشات الصغيرة جدًا */
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            #searchBox {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>🎬 Cinema Zone 🎥</h1>
-        <input type="text" id="searchBox" placeholder="🔍 ابحث عن فيلم...">
+        <input type="text" id="searchBox" placeholder="🔍 ابحث عن فيلم..." oninput="searchMovies()">
     </header>
 
-    <section class="movies">
-        <div class="movie">
+    <section class="movies" id="moviesContainer">
+        <div class="movie" data-title="sonic 2">
             <a href="sonic2.html">
                 <img src="https://s2.nidaalwatan.com/storage/attachments/72/temp_133727jpg_981800_833043_67ff00800ce13d1426f0da518d089e78.jpg" alt="Sonic 2">
             </a>
             <h3>Sonic 2</h3>
         </div>
 
-        <div class="movie">
+        <div class="movie" data-title="the loud house">
             <a href="loudhouse.html">
                 <img src="https://www.cartoon-arabic.network/thumbs/471387559_The_Loud_House_Movie.jpg" alt="The Loud House">
             </a>
             <h3>The Loud House</h3>
         </div>
 
-        <div class="movie">
+        <div class="movie" data-title="spellbound 2024">
             <a href="spellbound.html">
                 <img src="https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg" alt="Spellbound 2024">
             </a>
             <h3>Spellbound 2024</h3>
         </div>
 
-        <div class="movie">
+        <div class="movie" data-title="nimona">
             <a href="nimona.html">
                 <img src="https://c8.alamy.com/comp/2RBEK6P/nimona-2023-directed-by-nick-bruno-and-troy-quane-credit-annapurna-pictures-blue-sky-studios-album-2RBEK6P.jpg" alt="Nimona">
             </a>
             <h3>Nimona</h3>
         </div>
 
-        <div class="movie">
+        <div class="movie" data-title="inside out 2">
             <a href="insideout2.html">
                 <img src="https://m.media-amazon.com/images/I/81do41OmwiL.jpg" alt="Inside Out 2">
             </a>
             <h3>Inside Out 2</h3>
         </div>
 
-        <div class="movie">
+        <div class="movie" data-title="sonic 1">
             <a href="sonic1.html">
                 <img src="https://media0065.elcinema.com/uploads/_315x420_4b2920fbeaecaa77f7d9bf98eab0b762465cd166aa05eeeae8238088fbcf1c2b.jpg" alt="Sonic 1">
             </a>
             <h3>Sonic 1</h3>
         </div>
 
-        <div class="movie">
+        <div class="movie" data-title="sonic 3">
             <a href="sonic3.html">
                 <img src="https://assets.voxcinemas.com/posters/P_HO00011450_1724997905981.jpg" alt="Sonic 3">
             </a>
             <h3>Sonic 3</h3>
         </div>
 
-        <div class="movie">
+        <div class="movie" data-title="epic tails 2022">
             <a href="epictails.html">
                 <img src="https://m.media-amazon.com/images/M/MV5BYTQ1MzEyODAtNzM0OS00MjNmLTkxOTktYWI0NGMxZDJjZTFjXkEyXkFqcGc@._V1_.jpg" alt="Epic Tails (2022)">
             </a>
             <h3>Epic Tails (2022)</h3>
         </div>
 
-        <div class="movie">
+        <div class="movie" data-title="فيلم كوميدي">
             <a href="comedy.html">
                 <img src="https://media0065.elcinema.com/uploads/_315x420_4b2920fbeaecaa77f7d9bf98eab0b762465cd166aa05eeeae8238088fbcf1c2b.jpg" alt="فيلم كوميدي">
             </a>
@@ -145,5 +181,23 @@
     <footer>
         <p>© 2025 جميع الحقوق محفوظة | موقع الأفلام المفضل لديك! 🍿</p>
     </footer>
+
+    <script>
+        // دالة البحث عن الأفلام
+        function searchMovies() {
+            const searchBox = document.getElementById('searchBox');
+            const searchTerm = searchBox.value.toLowerCase(); // النص المدخل بحروف صغيرة
+            const movies = document.querySelectorAll('.movie'); // جميع الأفلام
+
+            movies.forEach(movie => {
+                const title = movie.getAttribute('data-title').toLowerCase(); // عنوان الفيلم
+                if (title.includes(searchTerm)) {
+                    movie.style.display = 'block'; // إظهار الفيلم إذا تطابق
+                } else {
+                    movie.style.display = 'none'; // إخفاء الفيلم إذا لم يتطابق
+                }
+            });
+        }
+    </script>
 </body>
 </html>
