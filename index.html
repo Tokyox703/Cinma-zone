@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="موقع أفلام يقدم مجموعة من الأفلام المتنوعة مع واجهة تفاعلية للبحث والتصفح بسهولة.">
     <title>موقع أفلام | Cinema Zone</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* إعادة تعيين الهوامش والحشوات */
         * {
             margin: 0;
             padding: 0;
@@ -14,8 +14,8 @@
         }
 
         body {
-            background-color: #000; /* خلفية سوداء */
-            color: #fff; /* نص أبيض */
+            background-color: #000;
+            color: #fff;
             font-family: Arial, sans-serif;
             direction: rtl;
         }
@@ -57,6 +57,7 @@
             width: 100%;
             border-radius: 10px;
             transition: transform 0.3s ease;
+            object-fit: cover;
         }
 
         .movie img:hover {
@@ -98,7 +99,7 @@
 
         @media (max-width: 480px) {
             .movie {
-                width: calc(100% - 20px); /* فيلم واحد في الصف على الشاشات الصغيرة جدًا */
+                width: calc(50% - 20px); /* فيلمين في الصف على الشاشات الصغيرة جدًا */
             }
 
             header h1 {
@@ -122,64 +123,73 @@
     </header>
 
     <section class="movies" id="moviesContainer">
+        <!-- الفيلم الأول -->
         <div class="movie" data-title="sonic 2">
-            <a href="sonic2.html">
-                <img src="https://s2.nidaalwatan.com/storage/attachments/72/temp_133727jpg_981800_833043_67ff00800ce13d1426f0da518d089e78.jpg" alt="Sonic 2">
+            <a href="javascript:void(0);" onclick="navigateToMovie('c29uaWMyLmh0bWw=')">
+                <img src="https://s2.nidaalwatan.com/storage/attachments/72/temp_133727jpg_981800_833043_67ff00800ce13d1426f0da518d089e78.jpg" alt="Sonic 2 - فيلم سونيك 2">
             </a>
             <h3>Sonic 2</h3>
         </div>
 
+        <!-- الفيلم الثاني -->
         <div class="movie" data-title="the loud house">
-            <a href="loudhouse.html">
-                <img src="https://www.cartoon-arabic.network/thumbs/471387559_The_Loud_House_Movie.jpg" alt="The Loud House">
+            <a href="javascript:void(0);" onclick="navigateToMovie('dGhlIGxvdWQgaG91c2UuY29t')">
+                <img src="https://www.cartoon-arabic.network/thumbs/471387559_The_Loud_House_Movie.jpg" alt="The Loud House - فيلم ذا لاود هاوس">
             </a>
             <h3>The Loud House</h3>
         </div>
 
+        <!-- الفيلم الثالث -->
         <div class="movie" data-title="spellbound 2024">
-            <a href="spellbound.html">
-                <img src="https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg" alt="Spellbound 2024">
+            <a href="javascript:void(0);" onclick="navigateToMovie('c3BlbGxib3VuZCAyMDI0Lmh0bWw=')">
+                <img src="https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg" alt="Spellbound 2024 - فيلم سبلباوند 2024">
             </a>
             <h3>Spellbound 2024</h3>
         </div>
 
+        <!-- الفيلم الرابع -->
         <div class="movie" data-title="nimona">
-            <a href="nimona.html">
-                <img src="https://c8.alamy.com/comp/2RBEK6P/nimona-2023-directed-by-nick-bruno-and-troy-quane-credit-annapurna-pictures-blue-sky-studios-album-2RBEK6P.jpg" alt="Nimona">
+            <a href="javascript:void(0);" onclick="navigateToMovie('bmltb25hLmh0bWw=')">
+                <img src="https://c8.alamy.com/comp/2RBEK6P/nimona-2023-directed-by-nick-bruno-and-troy-quane-credit-annapurna-pictures-blue-sky-studios-album-2RBEK6P.jpg" alt="Nimona - فيلم نيمونا 2023">
             </a>
             <h3>Nimona</h3>
         </div>
 
+        <!-- الفيلم الخامس -->
         <div class="movie" data-title="inside out 2">
-            <a href="insideout2.html">
-                <img src="https://m.media-amazon.com/images/I/81do41OmwiL.jpg" alt="Inside Out 2">
+            <a href="javascript:void(0);" onclick="navigateToMovie('aW5zaWRlb3V0Mi5odG1s')">
+                <img src="https://m.media-amazon.com/images/I/81do41OmwiL.jpg" alt="Inside Out 2 - فيلم إينسايد أوت 2">
             </a>
             <h3>Inside Out 2</h3>
         </div>
 
+        <!-- الفيلم السادس -->
         <div class="movie" data-title="sonic 1">
-            <a href="sonic1.html">
-                <img src="https://media0065.elcinema.com/uploads/_315x420_4b2920fbeaecaa77f7d9bf98eab0b762465cd166aa05eeeae8238088fbcf1c2b.jpg" alt="Sonic 1">
+            <a href="javascript:void(0);" onclick="navigateToMovie('c29uaWMxLmh0bWw=')">
+                <img src="https://media0065.elcinema.com/uploads/_315x420_4b2920fbeaecaa77f7d9bf98eab0b762465cd166aa05eeeae8238088fbcf1c2b.jpg" alt="Sonic 1 - فيلم سونيك 1">
             </a>
             <h3>Sonic 1</h3>
         </div>
 
+        <!-- الفيلم السابع -->
         <div class="movie" data-title="sonic 3">
-            <a href="sonic3.html">
-                <img src="https://assets.voxcinemas.com/posters/P_HO00011450_1724997905981.jpg" alt="Sonic 3">
+            <a href="javascript:void(0);" onclick="navigateToMovie('c29uaWMzLmh0bWw=')">
+                <img src="https://assets.voxcinemas.com/posters/P_HO00011450_1724997905981.jpg" alt="Sonic 3 - فيلم سونيك 3">
             </a>
             <h3>Sonic 3</h3>
         </div>
 
+        <!-- الفيلم الثامن -->
         <div class="movie" data-title="epic tails 2022">
-            <a href="epictails.html">
-                <img src="https://m.media-amazon.com/images/M/MV5BYTQ1MzEyODAtNzM0OS00MjNmLTkxOTktYWI0NGMxZDJjZTFjXkEyXkFqcGc@._V1_.jpg" alt="Epic Tails (2022)">
+            <a href="javascript:void(0);" onclick="navigateToMovie('ZXBpYyB0YWlscyAyMDIyLmh0bWw=')">
+                <img src="https://m.media-amazon.com/images/M/MV5BYTQ1MzEyODAtNzM0OS00MjNmLTkxOTktYWI0NGMxZDJjZTFjXkEyXkFqcGc@._V1_.jpg" alt="Epic Tails 2022 - فيلم إبك تيلز 2022">
             </a>
             <h3>Epic Tails (2022)</h3>
         </div>
 
+        <!-- الفيلم التاسع -->
         <div class="movie" data-title="فيلم كوميدي">
-            <a href="comedy.html">
+            <a href="javascript:void(0);" onclick="navigateToMovie('ZmlybSBrb21lZGljLmh0bWw=')">
                 <img src="https://media0065.elcinema.com/uploads/_315x420_4b2920fbeaecaa77f7d9bf98eab0b762465cd166aa05eeeae8238088fbcf1c2b.jpg" alt="فيلم كوميدي">
             </a>
             <h3>فيلم كوميدي</h3>
@@ -191,6 +201,12 @@
     </footer>
 
     <script>
+        // دالة لفك تشفير رابط الفيلم والتوجيه
+        function navigateToMovie(encodedUrl) {
+            const decodedUrl = atob(encodedUrl); // فك التشفير باستخدام Base64
+            window.location.href = decodedUrl; // الانتقال إلى صفحة الفيلم
+        }
+
         // دالة البحث عن الأفلام
         function searchMovies() {
             const searchBox = document.getElementById('searchBox');
