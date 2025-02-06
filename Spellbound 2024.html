@@ -13,24 +13,47 @@
             margin: 0;
             padding: 0;
             direction: rtl;
+            overflow-x: hidden;
         }
 
         header {
             background-color: #1c1c1c;
-            padding: 20px;
+            padding: 14px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         header h1 {
             color: #8a2be2;
-            font-size: 36px;
+            font-size: 24px;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #8a2be2, 0 0 20px #8a2be2, 0 0 30px #8a2be2;
+            }
+            to {
+                text-shadow: 0 0 20px #8a2be2, 0 0 30px #8a2be2, 0 0 40px #8a2be2;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .movie-details {
             max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
+            margin: 28px auto;
+            padding: 14px;
             background-color: #262626;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -38,42 +61,69 @@
         }
 
         .movie-details img {
-            max-width: 100%;
+            width: 28%; /* تم تقليص الحجم بنسبة 10% إضافية */
+            height: auto;
             border-radius: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            animation: slideIn 1.5s ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        .movie-details img:hover {
+            transform: scale(1.05);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .movie-info {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .movie-info div {
             background-color: #333;
-            padding: 15px;
+            padding: 10px;
             border-radius: 10px;
-            margin: 10px;
+            margin: 6px;
             flex: 1;
             text-align: center;
-            min-width: 150px;
+            min-width: 110px;
+            animation: fadeIn 2s ease-in-out;
+            transition: transform 0.3s ease;
+        }
+
+        .movie-info div:hover {
+            transform: scale(1.05);
         }
 
         .movie-info h3 {
             color: #8a2be2;
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .btn-watch {
             background-color: #ff3d00;
             color: #fff;
-            padding: 15px 30px;
+            padding: 10px 22px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 18px;
+            font-size: 14px;
             display: inline-block;
-            margin: 10px;
+            margin: 6px;
             text-align: center;
             transition: transform 0.3s ease, background 0.3s ease;
         }
@@ -86,12 +136,12 @@
         .btn-back {
             background-color: #007bff;
             color: #fff;
-            padding: 15px 30px;
+            padding: 10px 22px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 12px;
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 14px;
             text-align: center;
             transition: background 0.3s ease;
         }
@@ -102,30 +152,115 @@
 
         .fact-section {
             background-color: #292929;
-            padding: 20px;
+            padding: 14px;
             border-radius: 10px;
-            margin-top: 20px;
+            margin-top: 14px;
+            animation: fadeIn 2.5s ease-in-out;
         }
 
         .fact-section h2 {
             color: #8a2be2;
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 14px;
         }
 
         .fact {
             background-color: #444;
-            padding: 15px;
+            padding: 10px;
             border-radius: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .fact:hover {
+            transform: scale(1.05);
         }
 
         footer {
             background-color: #1c1c1c;
             color: #fff;
             text-align: center;
-            padding: 10px;
-            margin-top: 40px;
+            padding: 6px;
+            margin-top: 28px;
+            animation: fadeIn 3.5s ease-in-out;
+        }
+
+        /* التعديلات للهواتف المحمولة */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 20px; /* تصغير حجم العنوان */
+            }
+
+            .movie-details {
+                padding: 10px;
+                margin: 20px auto;
+            }
+
+            .movie-details img {
+                width: 50%; /* زيادة حجم الصورة لتناسب الشاشات الصغيرة */
+            }
+
+            .movie-info {
+                flex-direction: column; /* جعل العناصر في عمود واحد */
+            }
+
+            .movie-info div {
+                margin: 5px 0; /* تقليل الهوامش */
+                width: 100%; /* جعل العناصر تأخذ العرض الكامل */
+            }
+
+            .btn-watch, .btn-back {
+                width: 100%; /* جعل الأزرار تأخذ العرض الكامل */
+                margin: 5px 0; /* تقليل الهوامش */
+                padding: 8px 15px; /* تصغير حجم الأزرار */
+                font-size: 12px; /* تصغير حجم الخط */
+            }
+
+            .fact-section h2 {
+                font-size: 18px; /* تصغير حجم العنوان */
+            }
+
+            .fact {
+                padding: 8px; /* تصغير الحشوة */
+                font-size: 12px; /* تصغير حجم الخط */
+            }
+
+            footer p {
+                font-size: 12px; /* تصغير حجم النص في الفوتر */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 18px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .movie-details {
+                padding: 8px;
+                margin: 10px auto;
+            }
+
+            .movie-details img {
+                width: 70%; /* زيادة حجم الصورة أكثر */
+            }
+
+            .btn-watch, .btn-back {
+                padding: 6px 12px; /* تصغير حجم الأزرار أكثر */
+                font-size: 10px; /* تصغير حجم الخط أكثر */
+            }
+
+            .fact-section h2 {
+                font-size: 16px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .fact {
+                padding: 6px; /* تصغير الحشوة أكثر */
+                font-size: 10px; /* تصغير حجم الخط أكثر */
+            }
+
+            footer p {
+                font-size: 10px; /* تصغير حجم النص في الفوتر أكثر */
+            }
         }
     </style>
 </head>
@@ -135,7 +270,7 @@
     </header>
 
     <section class="movie-details">
-        <img src="https://example.com/spellbound-poster.jpg" alt="Spellbound 2024">
+        <img src="https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg" alt="Spellbound 2024">
 
         <div class="movie-info">
             <div>
@@ -167,8 +302,8 @@
             </div>
         </div>
 
-        <a href="https://drive.google.com/file/d/example-link" class="btn-watch" target="_blank">مشاهدة 🎬</a>
-        <a href="https://drive.google.com/file/d/example-link" class="btn-watch" target="_blank">تحميل ⬇️</a>
+        <a href="https://drive.google.com/file/d/1GlA1Ffy0mh-3hPNC5-zXCYmrGlLCoJhb/view?usp=drive_link" class="btn-watch" target="_blank">مشاهدة 🎬</a>
+        <a href="https://drive.google.com/file/d/1GlA1Ffy0mh-3hPNC5-zXCYmrGlLCoJhb/view?usp=drive_link" class="btn-watch" target="_blank">تحميل ⬇️</a>
 
         <a href="index.html" class="btn-back">العودة إلى الصفحة الرئيسية 🏠</a>
     </section>
