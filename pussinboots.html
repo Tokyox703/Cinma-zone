@@ -14,6 +14,10 @@
             padding: 0;
             direction: rtl;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
 
         header {
@@ -21,6 +25,7 @@
             padding: 14px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 100%;
             animation: fadeIn 1.5s ease-in-out;
         }
 
@@ -51,8 +56,9 @@
         }
 
         .movie-details {
-            max-width: 1000px;
-            margin: 28px auto;
+            max-width: 90%;
+            width: 800px;
+            margin: 20px auto;
             padding: 14px;
             background-color: #262626;
             border-radius: 10px;
@@ -61,7 +67,8 @@
         }
 
         .movie-details img {
-            width: 28%;
+            width: 100%;
+            max-width: 300px;
             height: auto;
             border-radius: 10px;
             margin-bottom: 14px;
@@ -92,13 +99,13 @@
             justify-content: space-between;
             flex-wrap: wrap;
             margin-bottom: 14px;
+            gap: 10px;
         }
 
         .movie-info div {
             background-color: #333;
             padding: 10px;
             border-radius: 10px;
-            margin: 6px;
             flex: 1;
             text-align: center;
             min-width: 110px;
@@ -182,7 +189,68 @@
             text-align: center;
             padding: 6px;
             margin-top: 28px;
+            width: 100%;
             animation: fadeIn 3.5s ease-in-out;
+        }
+
+        /* التعديلات للهواتف المحمولة */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 20px; /* تصغير حجم العنوان */
+            }
+
+            .movie-details {
+                width: 95%; /* زيادة العرض لشاشات الهواتف */
+                padding: 10px;
+            }
+
+            .movie-info {
+                flex-direction: column; /* جعل العناصر في عمود واحد */
+                gap: 10px;
+            }
+
+            .movie-info div {
+                width: 100%; /* جعل العناصر تأخذ العرض الكامل */
+                margin: 5px 0;
+            }
+
+            .btn-watch, .btn-back {
+                width: 100%; /* جعل الأزرار تأخذ العرض الكامل */
+                margin: 5px 0;
+                padding: 8px 15px; /* تصغير حجم الأزرار */
+                font-size: 12px; /* تصغير حجم الخط */
+            }
+
+            .fact-section h2 {
+                font-size: 18px; /* تصغير حجم العنوان */
+            }
+
+            .fact {
+                font-size: 12px; /* تصغير حجم الخط */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 18px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .movie-details {
+                padding: 8px;
+            }
+
+            .btn-watch, .btn-back {
+                padding: 6px 12px; /* تصغير حجم الأزرار أكثر */
+                font-size: 10px; /* تصغير حجم الخط أكثر */
+            }
+
+            .fact-section h2 {
+                font-size: 16px; /* تصغير حجم العنوان أكثر */
+            }
+
+            .fact {
+                font-size: 10px; /* تصغير حجم الخط أكثر */
+            }
         }
     </style>
 </head>
