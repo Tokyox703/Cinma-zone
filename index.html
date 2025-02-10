@@ -1,18 +1,56 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-     <meta name="galaksion-domain-verification" content="4f801c4e223b114068c8da72fd9bf60060c1cc7b5bcad132f9c7b8232e616c77" />
-     <meta name="galaksion-domain-verification" content="4a0db5f7ab4356d4b56eb5b65d0f4a03a0bc4a9a0cd1f008af884f3c037098f6" />
-     <meta name="monetag" content="c408fd953449a8e9de86233a49f95764"/>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1623723271247235"
-     crossorigin="anonymous"></script>   
-    <meta name="google-adsense-account" content="ca-pub-1623723271247235">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="ED4VMvwCY3pjY5FJrdJIcFi3MS5wqYycADV64Qw17JQ" />
-    <meta name="description" content="موقع أفلام يقدم مجموعة من الأفلام المتنوعة مع واجهة تفاعلية للبحث والتصفح بسهولة.">
-    <title>موقع أفلام | Cinema Zone</title>
+    
+    <!-- تحسين العلامات الوصفية (Meta Tags) -->
+    <meta name="description" content="شاهد أحدث الأفلام المتنوعة أونلاين مجانًا على Cinema Zone. اكتشف أفلام جديدة 2024 وتصفح بسهولة عبر واجهة تفاعلية.">
+    <meta name="keywords" content="أفلام أونلاين, أفلام جديدة 2024, سينما أونلاين, مشاهدة أفلام مجانية, أفلام عربية, أفلام أجنبية, توب سينما, ماي سينما, ايجي بست">
+    <meta name="author" content="Cinema Zone">
+    
+    <!-- تحسين عنوان الصفحة (Title Tag) -->
+    <title>Cinema Zone - شاهد أحدث الأفلام أونلاين مجانًا | أفلام جديدة 2024</title>
+    
+    <!-- تحسين الروابط الخارجية (External Links) -->
+    <link rel="canonical" href="https://www.cinemazone.com">
+    
+    <!-- تحسين ملفات CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- تحسين الصور باستخدام Lazy Loading -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+    
+    <!-- تحسين الأداء باستخدام Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- تحسين SEO باستخدام Open Graph Tags -->
+    <meta property="og:title" content="Cinema Zone - شاهد أحدث الأفلام أونلاين مجانًا">
+    <meta property="og:description" content="شاهد أحدث الأفلام المتنوعة أونلاين مجانًا على Cinema Zone. اكتشف أفلام جديدة 2024 وتصفح بسهولة عبر واجهة تفاعلية.">
+    <meta property="og:image" content="https://www.cinemazone.com/logo.png">
+    <meta property="og:url" content="https://www.cinemazone.com">
+    <meta property="og:type" content="website">
+    
+    <!-- تحسين SEO باستخدام Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cinema Zone - شاهد أحدث الأفلام أونلاين مجانًا">
+    <meta name="twitter:description" content="شاهد أحدث الأفلام المتنوعة أونلاين مجانًا على Cinema Zone. اكتشف أفلام جديدة 2024 وتصفح بسهولة عبر واجهة تفاعلية.">
+    <meta name="twitter:image" content="https://www.cinemazone.com/logo.png">
+    
+    <!-- تحسين الأداء باستخدام Preload -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js" as="script">
+    
+    <!-- تحسين الأداء باستخدام Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- تحسين الأداء باستخدام Favicon -->
+    <link rel="icon" type="image/png" href="https://www.cinemazone.com/favicon.png">
+    
+    <!-- تحسين الأداء باستخدام Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+    
     <style>
         * {
             margin: 0;
@@ -23,7 +61,7 @@
         body {
             background-color: #000;
             color: #fff;
-            font-family: Arial, sans-serif;
+            font-family: 'Tajawal', sans-serif;
             direction: rtl;
         }
 
@@ -36,6 +74,7 @@
         header h1 {
             margin: 0;
             font-size: 2em;
+            color: #ffcc00;
         }
 
         #searchBox {
@@ -45,6 +84,7 @@
             margin-top: 10px;
             border: none;
             border-radius: 5px;
+            font-family: 'Tajawal', sans-serif;
         }
 
         .movies {
@@ -57,7 +97,7 @@
         .movie {
             margin: 10px;
             text-align: center;
-            width: calc(25% - 20px); /* 4 أفلام في الصف على الشاشات الكبيرة */
+            width: calc(25% - 20px);
         }
 
         .movie img {
@@ -74,6 +114,7 @@
         .movie h3 {
             margin: 10px 0 0;
             font-size: 1em;
+            color: #ffcc00;
         }
 
         footer {
@@ -81,18 +122,18 @@
             padding: 10px;
             text-align: center;
             margin-top: 20px;
+            color: #ffcc00;
         }
 
-        /* تصميم متجاوب */
         @media (max-width: 1024px) {
             .movie {
-                width: calc(33.33% - 20px); /* 3 أفلام في الصف على الشاشات المتوسطة */
+                width: calc(33.33% - 20px);
             }
         }
 
         @media (max-width: 768px) {
             .movie {
-                width: calc(50% - 20px); /* فيلمين في الصف على الشاشات الصغيرة */
+                width: calc(50% - 20px);
             }
 
             header h1 {
@@ -106,7 +147,7 @@
 
         @media (max-width: 480px) {
             .movie {
-                width: calc(50% - 20px); /* فيلمين في الصف على الشاشات الصغيرة جدًا */
+                width: calc(50% - 20px);
             }
 
             header h1 {
@@ -122,9 +163,7 @@
             }
         }
     </style>
-     <meta name="monetag" content="e70b91b69ebd6e41e7ca958fa06b7707">
 </head>
- <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="130315" async data-cfasync="false"></script>
 <body>
     <header>
         <h1>🎬 Cinema Zone 🎥</h1>
@@ -134,106 +173,122 @@
     <section class="movies" id="moviesContainer">
         <!-- الفيلم الأول -->
         <div class="movie" data-title="sonic 2">
-            <a href="sonic2.html">
-                <img src="https://s2.nidaalwatan.com/storage/attachments/72/temp_133727jpg_981800_833043_67ff00800ce13d1426f0da518d089e78.jpg" alt="Sonic 2 - فيلم سونيك 2">
+            <a href="sonic2.html" title="شاهد فيلم Sonic 2 أونلاين">
+                <img class="lazyload" data-src="https://s2.nidaalwatan.com/storage/attachments/72/temp_133727jpg_981800_833043_67ff00800ce13d1426f0da518d089e78.jpg" alt="شاهد فيلم Sonic 2 أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>Sonic 2</h3>
         </div>
 
         <!-- الفيلم الثاني -->
         <div class="movie" data-title="the loud house">
-            <a href="theloudhouse.html">
-                <img src="https://www.cartoon-arabic.network/thumbs/471387559_The_Loud_House_Movie.jpg" alt="The Loud House - فيلم ذا لاود هاوس">
+            <a href="theloudhouse.html" title="شاهد فيلم The Loud House أونلاين">
+                <img class="lazyload" data-src="https://www.cartoon-arabic.network/thumbs/471387559_The_Loud_House_Movie.jpg" alt="شاهد فيلم The Loud House أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>The Loud House</h3>
         </div>
 
         <!-- الفيلم الثالث -->
         <div class="movie" data-title="spellbound 2024">
-            <a href="spellbound2024.html">
-                <img src="https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg" alt="Spellbound 2024 - فيلم سبلباوند 2024">
+            <a href="spellbound2024.html" title="شاهد فيلم Spellbound 2024 أونلاين">
+                <img class="lazyload" data-src="https://m.media-amazon.com/images/M/MV5BYTU4NWFlMjEtZGFhMi00NzkxLWJkODQtOWExNDQ2NGVjM2RjXkEyXkFqcGc@._V1_.jpg" alt="شاهد فيلم Spellbound 2024 أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>Spellbound 2024</h3>
         </div>
 
         <!-- الفيلم الرابع -->
         <div class="movie" data-title="nimona">
-            <a href="nimona.html">
-                <img src="https://c8.alamy.com/comp/2RBEK6P/nimona-2023-directed-by-nick-bruno-and-troy-quane-credit-annapurna-pictures-blue-sky-studios-album-2RBEK6P.jpg" alt="Nimona - فيلم نيمونا 2023">
+            <a href="nimona.html" title="شاهد فيلم Nimona أونلاين">
+                <img class="lazyload" data-src="https://c8.alamy.com/comp/2RBEK6P/nimona-2023-directed-by-nick-bruno-and-troy-quane-credit-annapurna-pictures-blue-sky-studios-album-2RBEK6P.jpg" alt="شاهد فيلم Nimona أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>Nimona</h3>
         </div>
 
         <!-- الفيلم الخامس -->
         <div class="movie" data-title="inside out 2">
-            <a href="insideout2.html">
-                <img src="https://m.media-amazon.com/images/I/81do41OmwiL.jpg" alt="Inside Out 2 - فيلم إينسايد أوت 2">
+            <a href="insideout2.html" title="شاهد فيلم Inside Out 2 أونلاين">
+                <img class="lazyload" data-src="https://m.media-amazon.com/images/I/81do41OmwiL.jpg" alt="شاهد فيلم Inside Out 2 أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>Inside Out 2</h3>
         </div>
 
         <!-- الفيلم السادس -->
         <div class="movie" data-title="sonic 1">
-            <a href="sonic1.html">
-                <img src="https://media0065.elcinema.com/uploads/_320x_4b2920fbeaecaa77f7d9bf98eab0b762465cd166aa05eeeae8238088fbcf1c2b.jpg" alt="Sonic 1 - فيلم سونيك 1">
+            <a href="sonic1.html" title="شاهد فيلم Sonic 1 أونلاين">
+                <img class="lazyload" data-src="https://media0065.elcinema.com/uploads/_320x_4b2920fbeaecaa77f7d9bf98eab0b762465cd166aa05eeeae8238088fbcf1c2b.jpg" alt="شاهد فيلم Sonic 1 أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>Sonic 1</h3>
         </div>
 
         <!-- الفيلم السابع -->
         <div class="movie" data-title="spider-man across the spider-verse">
-            <a href="spiderman.html">
-                <img src="https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_.jpg" alt="Spider-Man: Across the Spider-Verse - فيلم سبايدرمان">
+            <a href="spiderman.html" title="شاهد فيلم Spider-Man: Across the Spider-Verse أونلاين">
+                <img class="lazyload" data-src="https://m.media-amazon.com/images/M/MV5BMzI0NmVkMjEtYmY4MS00ZDMxLTlkZmEtMzU4MDQxYTMzMjU2XkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_.jpg" alt="شاهد فيلم Spider-Man: Across the Spider-Verse أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>Spider-Man: Across the Spider-Verse</h3>
         </div>
 
         <!-- الفيلم الثامن -->
         <div class="movie" data-title="the super mario bros movie">
-            <a href="supermario.html">
-                <img src="https://m.media-amazon.com/images/M/MV5BOTJhNzlmNzctNTU5Yy00N2YwLThhMjQtZDM0YjEzN2Y0ZjNhXkEyXkFqcGdeQXVyMTEwMTQ4MzU5._V1_.jpg" alt="The Super Mario Bros. Movie - فيلم سوبر ماريو">
+            <a href="supermario.html" title="شاهد فيلم The Super Mario Bros. Movie أونلاين">
+                <img class="lazyload" data-src="https://m.media-amazon.com/images/M/MV5BOTJhNzlmNzctNTU5Yy00N2YwLThhMjQtZDM0YjEzN2Y0ZjNhXkEyXkFqcGdeQXVyMTEwMTQ4MzU5._V1_.jpg" alt="شاهد فيلم The Super Mario Bros. Movie أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>The Super Mario Bros. Movie</h3>
         </div>
 
         <!-- الفيلم التاسع -->
         <div class="movie" data-title="elemental">
-            <a href="elemental.html">
-                <img src="https://m.media-amazon.com/images/M/MV5BZjYxYzU2ZDYtMjFmYi00YzE3LWI1ZjItYjY1YjRkNjQyYzVlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" alt="Elemental - فيلم إيليمنتال">
+            <a href="elemental.html" title="شاهد فيلم Elemental أونلاين">
+                <img class="lazyload" data-src="https://m.media-amazon.com/images/M/MV5BZjYxYzU2ZDYtMjFmYi00YzE3LWI1ZjItYjY1YjRkNjQyYzVlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" alt="شاهد فيلم Elemental أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>Elemental</h3>
         </div>
 
         <!-- الفيلم العاشر -->
         <div class="movie" data-title="puss in boots the last wish">
-            <a href="pussinboots.html">
-                <img src="https://m.media-amazon.com/images/M/MV5BNjMyMDBjMGUtNDUzZi00N2MwLTg1MjItZTk2MDE1OTZmNTYxXkEyXkFqcGdeQXVyMTQ5NjA0NDM0._V1_.jpg" alt="Puss in Boots: The Last Wish - فيلم القط ذو الحذاء">
+            <a href="pussinboots.html" title="شاهد فيلم Puss in Boots: The Last Wish أونلاين">
+                <img class="lazyload" data-src="https://m.media-amazon.com/images/M/MV5BNjMyMDBjMGUtNDUzZi00N2MwLTg1MjItZTk2MDE1OTZmNTYxXkEyXkFqcGdeQXVyMTQ5NjA0NDM0._V1_.jpg" alt="شاهد فيلم Puss in Boots: The Last Wish أونلاين مجانًا على Cinema Zone">
             </a>
             <h3>Puss in Boots: The Last Wish</h3>
         </div>
     </section>
 
+    <!-- إضافة محتوى نصي غني بالكلمات المفتاحية -->
+    <section class="content">
+        <h2>أفضل موقع لمشاهدة الأفلام أونلاين مجانًا</h2>
+        <p>مرحبًا بكم في <strong>Cinema Zone</strong>، أفضل موقع لمشاهدة الأفلام أونلاين مجانًا. لدينا مجموعة كبيرة من <strong>أفلام جديدة 2024</strong>، بما في ذلك الأفلام العربية والأجنبية والكرتون. تصفح بسهولة واختار ما تريد مشاهدته!</p>
+        
+        <h3>أفلام جديدة 2024</h3>
+        <p>استمتع بمشاهدة أحدث الأفلام مثل <strong>Sonic 2</strong>، <strong>Spider-Man: Across the Spider-Verse</strong>، و<strong>The Super Mario Bros. Movie</strong>.</p>
+        
+        <h3>أفلام عربية وأجنبية</h3>
+        <p>تصفح مجموعة كبيرة من الأفلام العربية والأجنبية المترجمة والمحدثة يوميًا.</p>
+    </section>
+
     <footer>
-        <p>© 2025 جميع الحقوق محفوظة | موقع الأفلام المفضل لديك! 🍿</p>
+        <p>© 2025 جميع الحقوق محفوظة | Cinema Zone - موقع الأفلام المفضل لديك! 🍿</p>
     </footer>
 
     <script>
         // دالة البحث عن الأفلام
         function searchMovies() {
             const searchBox = document.getElementById('searchBox');
-            const searchTerm = searchBox.value.toLowerCase(); // النص المدخل بحروف صغيرة
-            const movies = document.querySelectorAll('.movie'); // جميع الأفلام
+            const searchTerm = searchBox.value.toLowerCase();
+            const movies = document.querySelectorAll('.movie');
 
             movies.forEach(movie => {
-                const title = movie.getAttribute('data-title').toLowerCase(); // عنوان الفيلم
+                const title = movie.getAttribute('data-title').toLowerCase();
                 if (title.includes(searchTerm)) {
-                    movie.style.display = 'block'; // إظهار الفيلم إذا تطابق
+                    movie.style.display = 'block';
                 } else {
-                    movie.style.display = 'none'; // إخفاء الفيلم إذا لم يتطابق
+                    movie.style.display = 'none';
                 }
             });
         }
+
+        // تفعيل Lazy Loading للصور
+        const lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazyload"
+        });
     </script>
- <script src="https://kulroakonsu.net/88/tag.min.js" data-zone="130315" async data-cfasync="false"></script>
 </body>
 </html>
